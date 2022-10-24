@@ -17,7 +17,8 @@ Optional<String> string =
 
 <body>
 <H1>DetectLanguage</H1>
-<H3>文章：<%= string.orElse("ERROR") %></H3>
-<H3>結果：<%= message.orElse("ERROR") %></H3>
+<H3>positive：<%= message.orElse("ERROR") %></H3>
+<H3>neutral：<%= message.orElse("ERROR") %></H3>
+<H3>negative：<%= message.orElse("ERROR") %></H3>
 </body>
 </html>
