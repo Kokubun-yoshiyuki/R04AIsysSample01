@@ -14,9 +14,9 @@ public class Sentiment {
 	public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 		Sentiments message = getSentiment("Stepover Toehold With Facelock");
 		if (message != null) {
-			System.out.println("positive" + message.documents[0].confidenceScores.positive);
-			System.out.println("neutral" + message.documents[0].confidenceScores.neutral);
-			System.out.println("negative" + message.documents[0].confidenceScores.negative);
+			System.out.println("positive :" + message.documents[0].confidenceScores.positive);
+			System.out.println("neutral :" + message.documents[0].confidenceScores.neutral);
+			System.out.println("negative :" + message.documents[0].confidenceScores.negative);
 		}
 	}
 
@@ -27,12 +27,12 @@ public class Sentiment {
 		Map<String, String> map = new HashMap<>();
 		map.put("Ocp-Apim-Subscription-Key", "417bf7a8aec2439f8cd3264aa2d31f90");
 
-		Docs doc = new Docs();
+		SDocs doc = new SDocs();
 		doc.id = "1";
 		doc.text = s;
 
-		Source src = new Source();
-		src.documents = new Docs[1];
+		SSource src = new SSource();
+		src.documents = new SDocs[1];
 		src.documents[0] = doc;
 
 		String jsonData = new Gson().toJson(src);
@@ -109,7 +109,7 @@ class Relations {
 }
 
 class SSource {
-	Docs[] documents;
+	SDocs[] documents;
 }
 
 class SDocs {
