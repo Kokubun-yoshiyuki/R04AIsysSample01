@@ -89,7 +89,7 @@ class Assessment {
 	ConfidenceScores confidenceScores;
 	float lemgth;
 	float offset;
-	String sentimenbt;
+	String sentiment;
 	String text;
 }
 
